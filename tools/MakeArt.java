@@ -26,6 +26,15 @@ public class MakeArt {
         write(icon(512, false), dir + "/play/icon-512.png"); // Play applies its own mask: full square
         write(banner(1280, 720), dir + "/play/tv-banner-1280x720.png");
         write(banner(1024, 500), dir + "/play/feature-graphic-1024x500.png");
+        // GitHub social preview + Open Graph image (shown when the repo/site link is shared)
+        BufferedImage social = banner(1280, 640);
+        Graphics2D sg = g(social);
+        sg.setFont(new Font("SansSerif", Font.BOLD, 30));
+        sg.setColor(ACCENT);
+        String line = "for NVIDIA SHIELD TV  ·  no root";
+        sg.drawString(line, (1280 - sg.getFontMetrics().stringWidth(line)) / 2, 590);
+        sg.dispose();
+        write(social, dir + "/docs/assets/social-preview-1280x640.png");
     }
 
     static Graphics2D g(BufferedImage img) {

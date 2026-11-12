@@ -68,6 +68,10 @@ Android's built-in NAT and DHCP. Nothing needs to be configured on the phone or 
 No. It uses Android's Network debugging (adb over the local network) to call the system tethering
 service, which is the same access a computer with adb would have. It doesn't modify the system.
 
+### Can I use my SHIELD TV as a Wi-Fi router or access point?
+Yes. A SHIELD connected by Ethernet becomes a Wi-Fi access point with its own DHCP and NAT, like a
+small travel router. That's handy in hotels, dorms and offices that only give you a wired port.
+
 ### Why does the 5GHz network name start with `DIRECT-SH-`?
 SHIELD's Wi-Fi firmware only allows a normal access point on 2.4GHz (5GHz channels are restricted to
 "no initiating radiation" in AP mode). Wi-Fi Direct groups are allowed on 5GHz, and Wi-Fi Direct
