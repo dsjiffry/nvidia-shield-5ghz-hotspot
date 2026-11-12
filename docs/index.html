@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NVIDIA SHIELD TV 5GHz Wi-Fi Hotspot: Share Ethernet over Wi-Fi (No Root, No Proxy)</title>
+<meta name="description" content="Free app that turns NVIDIA SHIELD TV into a 5GHz Wi-Fi hotspot sharing its Ethernet connection. Real NAT routing: no proxy, no root, auto-starts at boot.">
+<meta name="keywords" content="NVIDIA SHIELD hotspot, SHIELD TV Wi-Fi hotspot, Android TV hotspot, 5GHz hotspot, Ethernet to WiFi, share ethernet over wifi, tethering without root, no proxy hotspot, WiFi Direct internet sharing">
+<link rel="canonical" href="https://dsjiffry.github.io/nvidia-shield-5ghz-hotspot/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" href="assets/icon-512.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NVIDIA SHIELD TV 5GHz Wi-Fi Hotspot: no root, no proxy">
+<meta property="og:description" content="Share your SHIELD TV's wired internet over 5GHz Wi-Fi. Devices connect directly with real routing.">
+<meta property="og:url" content="https://dsjiffry.github.io/nvidia-shield-5ghz-hotspot/">
+<meta property="og:image" content="https://dsjiffry.github.io/nvidia-shield-5ghz-hotspot/assets/feature-graphic-1024x500.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "5GHz Wifi Hotspot for NVIDIA SHIELD",
+  "operatingSystem": "Android TV 11 (NVIDIA SHIELD TV)",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "Turns NVIDIA SHIELD TV into a 5GHz Wi-Fi hotspot that shares its Ethernet connection with real NAT routing, without root or a proxy.",
+  "softwareVersion": "2.0",
+  "license": "https://opensource.org/licenses/MIT",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "downloadUrl": "https://github.com/dsjiffry/nvidia-shield-5ghz-hotspot/releases/latest",
+  "codeRepository": "https://github.com/dsjiffry/nvidia-shield-5ghz-hotspot",
+  "image": "https://dsjiffry.github.io/nvidia-shield-5ghz-hotspot/assets/screenshot-1.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Can NVIDIA SHIELD TV be used as a Wi-Fi hotspot?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not out of the box. This free app enables a real hotspot on SHIELD TV that shares its Ethernet connection over 5GHz or 2.4GHz Wi-Fi." } },
+    { "@type": "Question", "name": "Do devices need a proxy to use the SHIELD hotspot?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Devices get internet through Android's built-in NAT and DHCP, like any Wi-Fi router. Nothing is configured on the phone or laptop." } },
+    { "@type": "Question", "name": "Does the SHIELD hotspot app need root?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. It uses Android's Network debugging option to call the system tethering service. The system isn't modified." } },
+    { "@type": "Question", "name": "Why does the 5GHz network name start with DIRECT-?",
+      "acceptedAnswer": { "@type": "Answer", "text": "SHIELD's Wi-Fi firmware only allows 5GHz for Wi-Fi Direct groups, and Wi-Fi Direct names must start with DIRECT-xx-. The app turns that group into a fully routed hotspot. 2.4GHz mode can use any name." } }
+  ]
+}
+</script>
+<style>
+  :root { --bg:#0b1220; --card:#182235; --line:#253149; --text:#f1f5f9; --muted:#94a3b8; --accent:#38bdf8; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:linear-gradient(#0b1220,#131b2e) fixed; color:var(--text);
+         font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.15; margin: 0 0 12px; }
+  h2 { font-size: 24px; margin: 48px 0 12px; }
+  h3 { font-size: 17px; margin: 24px 0 4px; }
+  p, li { color: var(--muted); }
+  strong { color: var(--text); }
+  a { color: var(--accent); }
+  .lead { font-size: 19px; max-width: 720px; }
+  .btns { display:flex; flex-wrap:wrap; gap:12px; margin: 24px 0 32px; }
+  .btn { display:inline-block; padding:12px 20px; border-radius:12px; text-decoration:none; font-weight:600; }
+  .primary { background: var(--accent); color:#04121d; }
+  .secondary { border:1px solid var(--line); color: var(--text); }
+  img.shot { width:100%; height:auto; border-radius:16px; border:1px solid var(--line); }
+  .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:16px; }
+  .card { background: var(--card); border:1px solid var(--line); border-radius:16px; padding:18px 20px; }
+  .card h3 { margin-top: 0; }
+  ol li { margin: 6px 0; }
+  code { background:#0f1828; padding:2px 6px; border-radius:6px; color: var(--text); }
+  footer { margin-top: 56px; font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>NVIDIA SHIELD TV 5GHz Wi-Fi Hotspot</h1>
+  <p class="lead">Share your SHIELD TV's <strong>wired Ethernet internet over 5GHz Wi-Fi</strong>.
+    Phones, laptops and consoles connect directly with real routing: <strong>no proxy, no root</strong>,
+    and it starts automatically every time the SHIELD turns on.</p>
+  <div class="btns">
+    <a class="btn primary" href="https://github.com/dsjiffry/nvidia-shield-5ghz-hotspot/releases/latest">Download APK</a>
+    <a class="btn secondary" href="https://github.com/dsjiffry/nvidia-shield-5ghz-hotspot">Source on GitHub</a>
+  </div>
+  <img class="shot" src="assets/screenshot-1.png" width="1280" height="720"
+       alt="SHIELD TV hotspot app: network name, password and 5GHz band settings with live status">
+
+  <h2>Why it's different</h2>
+  <div class="grid">
+    <div class="card"><h3>No proxy</h3><p>Other Android TV hotspot apps force an HTTP proxy. This app uses Android's own NAT and DHCP, so games, VPNs and every app work.</p></div>
+    <div class="card"><h3>5GHz on SHIELD</h3><p>SHIELD can't host a normal 5GHz access point. This app gets 5GHz through a fully routed Wi-Fi Direct group.</p></div>
+    <div class="card"><h3>No root</h3><p>Uses Android's Network debugging option. Nothing on the system is modified.</p></div>
+    <div class="card"><h3>Set and forget</h3><p>Starts at boot and repairs itself if Wi-Fi drops. Live status shows channel and connected devices.</p></div>
+  </div>
+
+  <h2>Setup in 2 minutes</h2>
+  <ol>
+    <li>Connect the SHIELD to your router with an <strong>Ethernet cable</strong>.</li>
+    <li><strong>Settings › Device Preferences › About</strong>: select <em>Build</em> 7 times.</li>
+    <li><strong>Settings › Device Preferences › Developer options</strong>: turn on <em>Network debugging</em>.</li>
+    <li>Install the APK, open <strong>5GHz Wifi Hotspot</strong>, choose a name and password, press <strong>Start hotspot</strong>.</li>
+    <li>On the <em>Allow USB debugging?</em> prompt, tick <strong>Always allow</strong>. Then join <code>DIRECT-SH-&lt;name&gt;</code> from any device.</li>
+  </ol>
+
+  <h2>FAQ</h2>
+  <h3>Can NVIDIA SHIELD TV be used as a Wi-Fi hotspot?</h3>
+  <p>Not out of the box: SHIELD hides Android's hotspot feature. This app enables a real hotspot that shares the Ethernet connection over 5GHz or 2.4GHz Wi-Fi.</p>
+  <h3>Do devices need a proxy?</h3>
+  <p>No. They get an IP address and internet access automatically, like from any Wi-Fi router.</p>
+  <h3>Does it need root?</h3>
+  <p>No. It uses Android's Network debugging to reach the system tethering service.</p>
+  <h3>Why does the 5GHz name start with DIRECT-?</h3>
+  <p>SHIELD's Wi-Fi firmware only allows 5GHz for Wi-Fi Direct, and Wi-Fi Direct names must start with <code>DIRECT-xx-</code>. In 2.4GHz mode you can use any name.</p>
+  <h3>Which devices are supported?</h3>
+  <p>NVIDIA SHIELD TV and SHIELD TV Pro on Android 11 (tested on the 2019 SHIELD TV). Most Google TV devices lack the Network debugging option this app needs.</p>
+
+  <footer>
+    <p><a href="privacy.html">Privacy policy</a> · <a href="https://github.com/dsjiffry/nvidia-shield-5ghz-hotspot/issues">Report an issue</a> · MIT License</p>
+    <p>NVIDIA and SHIELD are trademarks of NVIDIA Corporation. This project is not affiliated with or endorsed by NVIDIA.</p>
+  </footer>
+</main>
+</body>
+</html>

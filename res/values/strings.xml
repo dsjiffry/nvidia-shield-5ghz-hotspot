@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">5GHz Wifi Hotspot Nvidia Shield</string>
+
+    <!-- House promo shown in the bottom-right corner. Edit freely; leave promo_title empty to hide it.
+         Keep it free of external payment/donation links (Google Play payments policy). -->
+    <string name="promo_title">Like this app? Star it on GitHub</string>
+    <string name="promo_text">github.com/dsjiffry/nvidia-shield-5ghz-hotspot</string>
+</resources>

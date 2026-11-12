@@ -1,0 +1,14 @@
+# Build output
+build/
+*.apk
+*.aab
+*.apks
+*.idsig
+
+# Signing keys and secrets: never commit these
+*.jks
+*.keystore
+*.properties
+
+# Downloaded tools
+tools/bundletool.jar
